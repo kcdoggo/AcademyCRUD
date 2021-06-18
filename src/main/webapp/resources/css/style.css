@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    *{margin:0px ;
+    font-family: 'Open Sans', sans-serif;}
+
+body{
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    font-family: 'Roboto', sans-serif;
+
+}
+.header{
+    height: 100px;
+	display:flex;
+	justify-content: space-between;
+    align-items: center;
+}
+
+.header h2{
+    padding-left:20px;
+    color:white;
+}
+.nav{
+    list-style:none;
+    display: flex;
+    padding-right: 25px;
+}
+
+.nav li a{
+    padding-right:40px;
+    text-decoration: none;
+    color:black;
+}
+
+body{
+    background-image: url("Untitled.svg");
+    color:white;
+}
+
+.mainPhrase{
+	margin-top:150px;
+    padding-left:30px;
+    font-size: 50px;
+}
+
+
+
+

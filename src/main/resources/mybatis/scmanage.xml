@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="scmanage">
+
+	<select id="list" resultType="Scmanage">
+
+		SELECT scmanage.scid, student.studentname, course.coursename
+		FROM scmanage
+		JOIN student ON scmanage.studentid = student.studentid
+		JOIN course ON scmanage.scid = course.courseid
+	</select>
+
+	<select id="item" resultType="Scmanage">
+		select * from scmanage
+		where scid = #{scid}
+
+	</select>
+
+
+	<insert id="add">
+		insert into scmanage
+		values (#{scid},#{studentid},#{courseid})
+	</insert>
+
+	<update id="update">
+		update scmanage
+		set courseid=#{courseid}, studentid=#{studentid},
+		where scid = #{scid}
+	</update>
+
+	<delete id="delete">
+		delete from scmanage
+		where scid=#{scid}
+	</delete>
+
+
+
+</mapper>

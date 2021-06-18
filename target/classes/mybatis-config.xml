@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  
+  
+  <configuration>
+   
+   <!-- give alias -->
+  
+  <typeAliases>
+  	<typeAlias type="kr.ac.kopo.academy.model.Student" alias="Student"/>
+  	<typeAlias type="kr.ac.kopo.academy.model.Course" alias="Course"/>
+  	<typeAlias type="kr.ac.kopo.academy.model.Scmanage" alias="Scmanage"/>
+  	
+  </typeAliases>
+  
+  <mappers>
+  	<mapper resource="mybatis/student.xml"></mapper>
+  	<mapper resource="mybatis/course.xml"></mapper>
+  	<mapper resource="mybatis/scmanage.xml"></mapper>
+  </mappers>
+  
+  </configuration>

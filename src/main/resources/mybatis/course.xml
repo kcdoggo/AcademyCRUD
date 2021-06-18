@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+  <mapper namespace="course">
+  
+  	<select id="list" resultType="Course">
+  		select * from course
+  	</select>
+  
+  	<select id="item" resultType="Course">
+  		select * from course 
+  		where courseid = #{courseid}
+  		
+  	</select>
+  	
+  	
+  	<insert id="add">
+  		insert into course 
+  		values (#{courseid},#{coursename},#{professor},#{courseprice})
+  	</insert>
+  	
+  	<update id="update">
+  		update course 
+  		set coursename=#{coursename}, professor=#{professor}, courseprice=#{courseprice}
+  		where courseid = #{courseid}
+  	</update>
+  	
+  	<delete id="delete">
+  		delete from course
+  		where courseid=#{courseid}
+  	</delete>
+  
+  
+  
+  </mapper>
